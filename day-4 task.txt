@@ -1,0 +1,206 @@
+problem 1:
+
+let array = [3,4,5,6,7,8,9];
+
+function oddNumber(arr) {
+    let output = [];
+    arr.forEach(function(v) {
+       if(v%2 != 0) {
+           output.push(v)
+       } 
+    });
+    console.log(output);
+}
+
+oddNumber(array);
+
+(function(arr) {
+   let output = [];
+    arr.forEach(function(v) {
+       if(v%2 != 0) {
+           output.push(v)
+       } 
+    });
+    console.log(output);
+})(array);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 2:
+
+let string = 'my name is ashwin';
+
+function toTitleCase(str) {
+  return str.replace( /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}
+
+console.log(toTitleCase(string));
+
+(function() {
+   str.replace( /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );  
+})(string);
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 3:
+
+let array = [3,4,5,6,7,8,9];
+
+function sumOfArray(arr) {
+    let sum = 0;
+    arr.forEach(v => sum += v);
+    console.log(sum);
+}
+
+sumOfArray(array);
+
+(function(arr) {
+  let sum = 0;
+  arr.forEach(v => sum += v);
+  console.log(sum);  
+   
+})(array);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 4:
+
+var arr = [1,2,3,4,5,6,7,8,9,10]
+
+function prime(Array) {
+  Array = Array.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+  });
+  return Array;
+}
+
+console.log(prime(arr));
+
+(function(Array){
+   Array = Array.filter((number) => {
+  for (var i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) return false;
+  }
+  return true;
+  });
+  console.log(Array);
+   
+})(arr);
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 5:
+
+let array = ['mom','bat','level','bottle','cap'];
+
+function palindrome(arr) {
+    let output = [];
+    arr.forEach(function(v) {
+     if( v.split('').reverse().join('') == v  ) {
+         output.push(v);
+     }
+        
+    })
+    return output;
+    
+}
+
+palindrome(array);
+
+(function(arr) {
+  let output = [];
+    arr.forEach(function(v) {
+     if( v.split('').reverse().join('') == v  ) {
+         output.push(v);
+     }
+        
+    })
+    console.log(output);  
+})(array);
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 6:
+
+let a1 = [1,5,3,2,4];
+let a2 = [8,9,6,7,10];
+
+function median(array1,array2) {
+   
+    let joint = a1.sort().concat(a2.sort(function(a,b) { return a - b}));
+    let s1 = joint[joint.length/2-1];
+    let s2 = joint[joint.length/2];
+    console.log(s1+s2)
+    
+}
+
+median(a1,a2);
+
+(function(array1,array2) {
+  let joint = a1.sort().concat(a2.sort(function(a,b) { return a - b}));
+    let s1 = joint[joint.length/2-1];
+    let s2 = joint[joint.length/2];
+    console.log(s1+s2)  
+    
+})(a1,a2)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 7:
+
+let array = [1,1,3,4,5,6,6];
+
+
+function duplicates(arr) {
+  output = arr.filter(function(item, index) {
+    return arr.indexOf(item) == index;
+})  
+  return output;
+}
+
+console.log(duplicates(array));
+
+(function(arr) {
+    output = arr.filter(function(item, index) {
+    return arr.indexOf(item) == index;
+})  
+  console.log(output);
+})(array);
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+problem 8:
+
+let array = [1,2,3,4,5];
+
+function rotate(arr, k) {
+    for (let i = 0; i < k; i++) {
+        arr.unshift(arr.pop()) 
+    }
+    return arr;
+};
+
+console.log(rotate(array,2));
+
+(function(arr,k) {
+   for (let i = 0; i < k; i++) {
+        arr.unshift(arr.pop()) 
+    }
+    console.log(arr);  
+})(array,2);
+
+
